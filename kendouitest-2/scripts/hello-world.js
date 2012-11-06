@@ -1,18 +1,35 @@
-﻿// JavaScript Document
+// JavaScript Document
 
 // Wait for PhoneGap to load
 document.addEventListener("deviceready", onDeviceReady, false);
 
 // PhoneGap is ready
 function onDeviceReady() {
-    getLocation();
+    //getLocation();
 }
 
+/*
 function getLocation() {
     navigator.geolocation.getCurrentPosition(onGeolocationSuccess, onGeolocationError);
 }
+*/
+
+function allStoreSwitchChange(event) {
+    if(event.checked) {
+        $('.per-store-switches').slideUp(function() {changeAllStoreSwitches(true)});
+    } else {
+        changeAllStoreSwitches(false);   
+        $('.per-store-switches').slideDown();
+    }
+}
+
+function changeAllStoreSwitches(newState) {
+    $('#grocery-switch').data('kendoMobileSwitch').check(newState);
+    $('#department-switch').data('kendoMobileSwitch').check(newState);
+}
 
 //=======================Say Hello (Page 1) Operations=======================//
+/*
 function sayHello() {
     var sayHelloInputElem = document.getElementById('helloWorldInput');
     var sayHelloTextElem = document.getElementById('helloWorldText');
@@ -58,3 +75,4 @@ function onGeolocationSuccess(position) {
 function onGeolocationError(error) {
     $("#myLocation").html("<span class='err'>" + error.message + "</span>");
 }
+*/

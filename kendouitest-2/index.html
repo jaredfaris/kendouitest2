@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <title></title>
@@ -13,35 +13,25 @@
         <link href="styles/main.css" rel="stylesheet" />
     </head>
     <body>
-        <div data-role="view" id="tabstrip-home" data-title="Hello World!">
-            <h1>Welcome!</h1>
-            <p>
-                Icenium&trade; enables you to build cross-platform device applications regardless of your 
-                development platform by combining the convenience of a local development toolset with the 
-                power and flexibility of the cloud.
-            </p>
+        <div data-role="view" id="tabstrip-shopping" data-title="Shopping">
+          
+            <ul data-role="listview" data-style="inset" data-type="group">
+                <li>Get HealthNudges at stores?
+                    <ul>
+                        <li>All stores <input data-role="switch" id="all-stores-switch" data-change="allStoreSwitchChange"/></li>
+                    </ul>
+                </li>
+                
+                <li class="per-store-switches">By type
+                    <ul>
+                        <li>Grocery <input data-role="switch" id="grocery-switch" /></li>
+                        <li>Department <input data-role="switch" id="department-switch" /></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
 
-        <div data-role="view" id="tabstrip-uiinteraction" data-title="UI Interaction">
-            <h1>Say Hello!</h1>
-            <div id='helloWorldInput'>
-                <label for="txtName" style="display: inline-block;">Enter your name:</label>
-                <input type="text" id="txtName" value="" />
-            </div>
-            <div id='helloWorldText' style="display:block;"></div>
-            <div class="buttonArea">
-                <a id="resetButton" data-role="button" data-click="sayHelloReset" data-icon="refresh">Reset</a>
-                <a id="submitButton" data-role="button" data-click="sayHello" data-icon="compose">Submit</a>
-            </div>
-        </div>
-
-        <div data-role="view" id="tabstrip-geolocation" data-title="Geolocation">
-            <h1>My Location</h1>
-            <div id="geoLocationContainer">
-                <div id="myLocation">Unable to get location information. Please check your network connection and try again.</div>
-                <a id="refreshMap" data-role="button" data-click="getLocation" data-icon="refresh">Refresh Location</a>
-                <div id="map_canvas"></div>
-            </div>
+        <div data-role="view" id="tabstrip-restaurant" data-title="UI Interaction">
         </div>
 
         <div data-role="layout" data-id="mobile-tabstrip">
@@ -53,9 +43,8 @@
 
             <div data-role="footer">
                 <div data-role="tabstrip">
-                    <a href="#tabstrip-home" data-icon="home">Home</a>
-                    <a href="#tabstrip-uiinteraction" data-icon="share">UI Interaction</a>
-                    <a href="#tabstrip-geolocation" data-icon="globe">Geolocation</a>
+                    <a href="#tabstrip-shopping" data-icon="cart">Shopping</a>
+                    <a href="#tabstrip-tabstrip-restaurant" data-icon="favorite">Restaurants</a>
                 </div>
             </div>
         </div>
@@ -63,9 +52,8 @@
          <div data-role="layout" data-id="mobile-tabstrip" data-platform="android">
             <div data-role="footer">
                 <div data-role="tabstrip">
-                    <a href="#tabstrip-home" data-icon="home">Home</a>
-                    <a href="#tabstrip-uiinteraction" data-icon="share">UI Interaction</a>
-                    <a href="#tabstrip-geolocation" data-icon="globe">Geolocation</a>
+                    <a href="#tabstrip-shopping" data-icon="cart">Shopping</a>
+                    <a href="#tabstrip-tabstrip-restaurant" data-icon="favorite">Restaurants</a>
                 </div>
             </div>
         </div> 
